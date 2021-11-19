@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_common_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/text_10"
+        android:layout_height="match_parent">
+
+        <com.eratani.android.utils.widget.roundedimageview.RoundedImageView
+            android:id="@+id/ic_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:riv_corner_radius="@dimen/radius_small" />
+
+
+        <TextView
+            android:id="@+id/tvNameProduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_10"
+            android:fontFamily="@font/helvetica"
+            android:maxLines="1"
+            android:text="-"
+            android:textColor="@color/text_black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica"
+            android:text="-"
+            android:textSize="@dimen/text_16" />
+
+        <TextView
+            android:id="@+id/tvStok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica"
+            android:text="-"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="@dimen/text_10"
+        android:labelFor="@+id/beatsPerMinSeek"
+        android:text="Jumlah Pembelian"
+        app:layout_constraintBottom_toTopOf="@+id/beatsPerMinSeek"
+        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:id="@+id/edJumlahStok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jumlah pembelian"
+        android:inputType="number"
+        android:textSize="13dp"
+        android:background="@drawable/backround_rounded_border_false"
+        android:maxLength="500" />
+
+    <Button
+        android:id="@+id/btAction"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/text_20"
+        android:layout_height="wrap_content"
+        android:text="Jual"/>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

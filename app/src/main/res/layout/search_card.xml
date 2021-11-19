@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/lnrlSearch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:padding="@dimen/text_10">
+
+    <EditText
+        android:id="@+id/edSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Masukan Kata"
+        android:textSize="13dp"
+        android:background="@drawable/backround_rounded_border_false"
+        android:maxLength="500" />
+
+    <Button
+        android:id="@+id/btAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/text_10"
+        android:layout_weight="3"
+        android:textSize="@dimen/text_12"
+        android:text="Cari Kata"
+        />
+</LinearLayout>

@@ -8,21 +8,12 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        gudangview {
-            storeFile file('/Users/tonirafi/Projek/key/gudang_view_key')
-            storePassword ''
-            keyAlias ''
-            keyPassword '!'
-        }
 
-
-    }
     compileSdkVersion 29
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.template.android"
+        applicationId "com.eratani.android"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 13
@@ -60,21 +51,21 @@ android {
 
         qa {
             dimension "env"
-            resValue("string", "app_name", "Tes Frezzmart")
-            buildConfigField "String", "URL_DOMAIN", "\"https://newsapi.org/\""
+            resValue("string", "app_name", "Tes Eratani")
+            buildConfigField "String", "URL_DOMAIN", "\"https://tes.org/\""
         }
 
         pre {
             dimension "env"
-            resValue("string", "app_name", "Tes Frezzmart")
-            buildConfigField "String", "URL_DOMAIN", "\"https://newsapi.org/\""
+            resValue("string", "app_name", "Tes Eratani")
+            buildConfigField "String", "URL_DOMAIN", "\"https://tes.org/\""
 
         }
 
         online {
             dimension "env"
-            resValue("string", "app_name", "Tes Frezzmart")
-            buildConfigField "String", "URL_DOMAIN", "\"https://newsapi.org/\""
+            resValue("string", "app_name", "Tes Eratani")
+            buildConfigField "String", "URL_DOMAIN", "\"https://tes.org/\""
 
 
         }
@@ -107,7 +98,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'me.samlss:broccoli:1.0.0'
-    implementation 'com.jakewharton:butterknife:10.2.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
     testImplementation "com.google.truth:truth:0.42"
     testImplementation "org.mockito:mockito-core:2.21.0"
@@ -144,10 +136,11 @@ dependencies {
     implementation "org.koin:koin-androidx-viewmodel:$koin_version"
     testImplementation "io.insert-koin:koin-test:$koin_version"
 
-    def roomVersion = "2.3.0"
+    def roomVersion = "2.2.5"
     implementation "androidx.room:room-runtime:$roomVersion"
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
-    androidTestImplementation "androidx.room:room-testing:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation("androidx.room:room-rxjava2:$roomVersion")
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
 
 
